@@ -1,0 +1,14 @@
+Test-Command: /usr/share/cargo/bin/cargo-auto-test const-random-macro 0.1.13 --all-targets --all-features
+Features: test-name=rust-const-random-macro:@
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test const-random-macro 0.1.13 --all-targets 
+Features: test-name=librust-const-random-macro-dev:default
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable
+
+Test-Command: /usr/share/cargo/bin/cargo-auto-test const-random-macro 0.1.13 --all-targets --no-default-features
+Features: test-name=librust-const-random-macro-dev:
+Depends: dh-cargo (>= 18), @
+Restrictions: allow-stderr, skip-not-installable

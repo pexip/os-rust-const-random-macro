@@ -1,0 +1,42 @@
+Source: rust-const-random-macro
+Section: rust
+Priority: optional
+Build-Depends: debhelper (>= 12),
+ dh-cargo (>= 25),
+ cargo:native <!nocheck>,
+ rustc:native <!nocheck>,
+ libstd-rust-dev <!nocheck>,
+ librust-getrandom-0.2+default-dev <!nocheck>,
+ librust-lazy-static-1+default-dev (>= 1.4.0-~~) <!nocheck>,
+ librust-proc-macro-hack-0.5+default-dev (>= 0.5.13-~~) <!nocheck>,
+ librust-tiny-keccak-2+default-dev (>= 2.0.2-~~) <!nocheck>,
+ librust-tiny-keccak-2+sha3-dev (>= 2.0.2-~~) <!nocheck>
+Maintainer: Debian Rust Maintainers <pkg-rust-maintainers@alioth-lists.debian.net>
+Uploaders:
+ Wolfgang Silbermayr <wolfgang@silbermayr.at>
+Standards-Version: 4.5.1
+Vcs-Git: https://salsa.debian.org/rust-team/debcargo-conf.git [src/const-random-macro]
+Vcs-Browser: https://salsa.debian.org/rust-team/debcargo-conf/tree/master/src/const-random-macro
+Rules-Requires-Root: no
+
+Package: librust-const-random-macro-dev
+Architecture: any
+Multi-Arch: same
+Depends:
+ ${misc:Depends},
+ librust-getrandom-0.2+default-dev,
+ librust-lazy-static-1+default-dev (>= 1.4.0-~~),
+ librust-proc-macro-hack-0.5+default-dev (>= 0.5.13-~~),
+ librust-tiny-keccak-2+default-dev (>= 2.0.2-~~),
+ librust-tiny-keccak-2+sha3-dev (>= 2.0.2-~~)
+Provides:
+ librust-const-random-macro+default-dev (= ${binary:Version}),
+ librust-const-random-macro-0-dev (= ${binary:Version}),
+ librust-const-random-macro-0+default-dev (= ${binary:Version}),
+ librust-const-random-macro-0.1-dev (= ${binary:Version}),
+ librust-const-random-macro-0.1+default-dev (= ${binary:Version}),
+ librust-const-random-macro-0.1.13-dev (= ${binary:Version}),
+ librust-const-random-macro-0.1.13+default-dev (= ${binary:Version})
+Description: Provides the procedural macro used by const-random - Rust source code
+ This package contains the source for the Rust const-random-macro crate,
+ packaged by debcargo for use with cargo and dh-cargo.
