@@ -1,3 +1,9 @@
+rust-const-random-macro (0.1.13-1pexip1) pexip; urgency=medium
+
+  * Prepare Pexip packaging
+
+ -- John-Mark Bell <jmb@pexip.com>  Wed, 16 Nov 2022 22:44:58 +0000
+
 rust-const-random-macro (0.1.13-1) unstable; urgency=medium
 
   * Team upload.
